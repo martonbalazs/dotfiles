@@ -1,6 +1,11 @@
+packloadall
+silent! helptags ALL
+
 " F1 is very annoying
 map <F1> <Esc>
 imap <F1> <Esc>
+
+map Y y$
 
 " How many times did you do q: ?
 map q: :q
@@ -12,7 +17,7 @@ let mapleader = " "
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>a :qa<CR>
 nnoremap <Leader><Leader> <PageDown><CR>
-nnoremap <Leader>g :GundoToggle<CR>
+nnoremap <Leader>g a<a href="" target="_blank"></a><ESC>3F"i
 nnoremap <Leader>h :noh<CR>
 nnoremap <Leader>o :only<CR>
 nnoremap <Leader>' "+p<CR>
@@ -30,6 +35,7 @@ nnoremap <Leader>q :call Writeifok()<CR>:q<CR>
 
 " Save and LaTeX with external script
 nnoremap <Leader>l :w<CR>:!lapdf %<CR>
+nnoremap <Leader>p :w<CR>:!plapdf %<CR>
 
 " Highlighters for various rsync and isync logs (see functions further down)
 nnoremap <Leader>1 :call Nextrsync()<CR> n :call Searchrsync()<CR> :noh<CR>
@@ -39,6 +45,7 @@ nnoremap <Leader>5 :call Nextmimbsy()<CR> n :call Searchmimbsy()<CR> :noh<CR>
 " I'm writing emails in Vim too
 nnoremap <Leader>b o<CR>Best wishes,<CR>Marton<ESC>
 nnoremap <Leader>k o<CR>Thank you,<CR>Marton<ESC>
+nnoremap <Leader>y o<CR>Many thanks,<CR>Marton<ESC>
 nnoremap <Leader>m o<CR>Üdv,<CR>Marci<ESC>
 
 " And I'm using org mode. Various time- and datestamps for that
@@ -91,6 +98,7 @@ set sw=1
 set background=dark
 set hlsearch
 set incsearch
+hi Search ctermbg=LightBlue
 set wildmode=longest,list
 set hid
 set nrformats=
